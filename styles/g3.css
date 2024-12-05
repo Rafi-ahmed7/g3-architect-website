@@ -9,6 +9,11 @@
 
 
   /* Shared Styles */
+
+  .section-title{
+    font-size: 2.8rem;
+    font-weight: 700;
+  }
 .text-primary{
     color: #FF900E;
 }
@@ -151,6 +156,69 @@ main > section {
     width: 100%;
 }
 
+
+/* facts Related style */
+
+.facts-container{
+   display: grid;
+   grid-template-columns: repeat(4, 1fr);
+   gap: 125px;
+}
+.fact{
+    width: 240px;
+    height: 240px;
+    border:2px solid #FF900E;
+    /* text-align: center; */
+    padding: 45px;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    opacity: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.fact-number{
+    font-size: 2.8rem;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+.fact-name{
+    font-size:1.3rem;
+    font-weight: 600;
+    margin-top: 10px;
+
+}
+
+.fact-description{
+    max-width: 540px;
+}
+
+
+/* sponsor realted styles */
+.sponsor-img-icons{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 155px;
+
+}
+.sponsor-img-icons  img {
+     
+        filter: grayscale(100%);
+        -webkit-filter: grayscale(100%);
+}
+      
+
+.sponsor-content{
+    max-width:550px ;
+    margin: 50px auto;
+    text-align: center;
+    /* margin-bottom:50px ; */
+}
+
+
 /* Responsive media query */
 @media screen and (max-width:576px) 
 {
@@ -160,11 +228,37 @@ main > section {
             flex-direction: column;
          }
 
-         .team-img-container{
+         .team-img-container,
+         .facts-container,
+         .sponsor-img-icons{
             grid-template-columns: repeat(1, 1fr);
          }
          .teams{
             gap: 20px;
          }
-        
+      .facts-container,
+      .sponsor-img-icons{
+        justify-items: center;
+      }
+         
+         
+}
+
+
+/* Medium size device */
+@media screen and (min-width:577px) and (max-width:992px) {
+
+    .teams{
+        flex-direction:column;
+    }
+    .our-features{
+        margin: 50px auto;
+    }
+    .sponsor-img-icons,
+    .facts-container{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 50px;
+        justify-items: center;
+    }
+    
 }
